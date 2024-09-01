@@ -26,7 +26,7 @@ body {
 .wrapper {
   margin: 0 auto;
   padding-bottom: 20px;
-  width: 1200px;
+  max-width: 1200px;
   font-size: 2rem;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.411);
@@ -34,7 +34,7 @@ body {
 }
 
 #start {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -95,4 +95,39 @@ body {
 #end button:hover {
   background-color: #f78c6b;
   border-color: #ef476f;
+}
+
+/*  Media Queries  */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px 20px 20px;
+    font-size: 1.5rem;
+  }
+
+  #start ul {
+    max-width: 350px;
+    gap: 7px;
+  }
+
+  #start ul li {
+    width: 82.25px;
+    height: 82.25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    padding: 20px 20px 20px;
+    font-size: 0.9rem;
+  }
+
+  #start ul {
+    max-width: 264px;
+    gap: 5px;
+  }
+
+  #start ul li {
+    width: 62.25px;
+    height: 62.25px;
+  }
 }
