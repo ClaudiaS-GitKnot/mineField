@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   for (const card of cards) {
     card.addEventListener('click', function () {
+      if (this.classList.contains('clicked')) {
+        return;
+      }
+
+      this.classList.add('clicked');
+
       if (this.classList.contains('bomb')) {
         bgImage(this, true);
         display(coverSpan, true);
